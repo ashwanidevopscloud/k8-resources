@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: resource-limit
+  name: limits
 spec:
   containers:
-  - name: app
-    image: images.my-company.example/app:v4
+  - name: nginx
+    image: nginx
     resources:
       requests:
         memory: "64Mi"
