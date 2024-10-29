@@ -9,6 +9,6 @@ spec:
     environment: dev
   ports:
   - name: nginx-svc-port
-    target: TCP
+    protocol: TCP
     port: 80 # service port
-    targetPort: 8080 # container port
+    targetPort: 80 # container port
