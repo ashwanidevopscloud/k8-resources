@@ -19,7 +19,7 @@ spec:
     # these labels belong to pod
       labels:
         tier: frontend
-        app: nginx
+        app: nginx:stable-perl
     spec:
       containers:
       - name: nginx
