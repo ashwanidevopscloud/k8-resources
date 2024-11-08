@@ -33,6 +33,9 @@ metadata:
     project: expense
     module: backend
 spec:
+  replicas: 2
+  nodeSlector: 
+    topology.kubernetes.io/zone: us-east-1a
   containers:
   - name: nginx
     image: nginx
