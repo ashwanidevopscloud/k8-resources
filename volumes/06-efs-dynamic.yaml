@@ -39,7 +39,7 @@ spec:
     project: efs-dynamic
   ports:
     - name: node-port-svc
-      target: TCP
+      protocol: TCP
       port: 80
       targetPort: 80
       nodePort: 30003
