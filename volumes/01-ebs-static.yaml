@@ -37,7 +37,7 @@ spec:
     topology.kubernetes.io/zone: us-east-1a
   containers:
   - name: nginx
-    image: nginx
+    image: nginx:1.27.2
     volumeMounts: # docker run -v hostpath:containerpath
     - name: ebs-static
       mountPath: /usr/share/nginx/html
