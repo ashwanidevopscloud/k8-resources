@@ -45,7 +45,7 @@ spec:
       claimName: ebs-static-claim
 ---
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: ebs-service
 spec:
