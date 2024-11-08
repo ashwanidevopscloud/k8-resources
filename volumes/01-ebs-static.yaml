@@ -53,7 +53,7 @@ spec:
   selector: 
     project: expense
     module: backend
-  prots:
+  ports:
     - name: node-port-service
       protocol: TCP
       port: 80
