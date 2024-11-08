@@ -24,3 +24,38 @@ spec:
   resources:
     requests:
       storage: 5Gi
+----
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ebs-static-pod
+  labels:
+    project: expense
+    module: backend
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    volumeMounts: # docker run -v hostpath:containerpath
+    - name: persistent-storage
+      mountPath: /usr/share/nginx/html
+  volumes:
+  - name: ebs-static
+    persistentVolumeClaim:
+      claimName: ebs-static-claim
+----
+apiVersion: v1
+kind: service
+metadata:
+  name: ebs-service
+spec:
+  type: LoadBalancer
+  selector: 
+     labels:
+        project: expense
+        module: backend
+  prots:
+    - name: node-port-service
+      protocol: TCP
+      port: 80
+      targetPort: 80
