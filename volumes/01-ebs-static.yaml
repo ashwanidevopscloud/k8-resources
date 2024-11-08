@@ -51,9 +51,8 @@ metadata:
 spec:
   type: LoadBalancer
   selector: 
-     labels:
-        project: expense
-        module: backend
+    project: expense
+    module: backend
   prots:
     - name: node-port-service
       protocol: TCP
