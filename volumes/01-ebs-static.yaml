@@ -33,7 +33,7 @@ metadata:
     project: expense
     module: backend
 spec:
-  replicas: 2
+  replicas: 3
   nodeSlector: 
     topology.kubernetes.io/zone: us-east-1a
   containers:
