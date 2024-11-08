@@ -34,7 +34,7 @@ metadata:
     module: backend
 spec:
   replicas: 3
-  nodeSlector: 
+  nodeSelector: 
     topology.kubernetes.io/zone: us-east-1a
   containers:
   - name: nginx
